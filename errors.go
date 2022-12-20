@@ -37,6 +37,7 @@ func New(code int64, msg ...string) error {
 	e := &Error{
 		Cause: ErrEmpty,
 	}
+
 	e.Code = code
 	if len(msg) > 0 {
 		e.Cause = errors.New(msg[0])
